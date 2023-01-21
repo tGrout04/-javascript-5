@@ -1,1 +1,160 @@
+.slides
+{
+    position: relative;
 
+    height: 150px;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.slides
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: opacity 1s;
+         -o-transition: opacity 1s;
+            transition: opacity 1s;
+
+    opacity: 0;
+}
+
+.active
+{
+    z-index: 0;
+
+    opacity: 1;
+}
+.slides
+{
+    font-size: 40px;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 40px;
+
+    color: #fff;
+    background: #333;
+}
+
+.slides:nth-of-type(1)
+{
+    background: red;
+}
+
+.slides:nth-of-type(2)
+{
+    background: orange;
+}
+
+.slides:nth-of-type(3)
+{
+    background: green;
+}
+
+.slides:nth-of-type(4)
+{
+    background: blue;
+}
+
+.slides:nth-of-type(5)
+{
+    background: purple;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 20px;
+}
+
+.carousel
+{
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.slides
+{
+    margin-bottom: 20px;
+}
+
+.indicators,
+.controls
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin-bottom: 20px;
+
+    gap: 20px;
+}
+
+.indicator,
+.control
+{
+    font-size: 20px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    min-width: 40px;
+    min-height: 40px;
+    padding: .5em;
+
+    cursor: pointer;
+
+    border-radius: 40px;
+    background-color: lightyellow;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.indicator
+{
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.indicator:hover,
+.control:hover
+{
+    background-color: sandybrown;
+}
+
+.indicator.active
+{
+    background-color: peachpuff;
+}
+
+.control-pause span
+{
+    position: absolute;
+
+    display: block;
+
+    -webkit-transition: .5s;
+         -o-transition: .5s;
+            transition: .5s;
+
+    opacity: 0;
+}

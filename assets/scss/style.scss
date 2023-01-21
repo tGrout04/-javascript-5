@@ -1,0 +1,113 @@
+.slides {
+  position: relative;
+  height: 150px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slides {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+}
+
+.active {
+  opacity: 1;
+  z-index: 0;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slides {
+  font-size: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+}
+
+.slides:nth-of-type(1) {
+  background: red;
+}
+
+.slides:nth-of-type(2) {
+  background: orange;
+}
+
+.slides:nth-of-type(3) {
+  background: green;
+}
+
+.slides:nth-of-type(4) {
+  background: blue;
+}
+
+.slides:nth-of-type(5) {
+  background: purple;
+}
+
+body {
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.carousel {
+  user-select: none;
+}
+
+.slides {
+  margin-bottom: 20px;
+}
+
+.indicators,
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.indicator,
+.control {
+  display: flex;
+  padding: 0.5em;
+  min-height: 40px;
+  background-color: lightyellow;
+  min-width: 40px;
+  font-size: 20px;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.indicator {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.indicator:hover,
+.control:hover {
+  background-color: sandybrown;
+}
+
+.indicator.active {
+  background-color: peachpuff;
+}
+
+.control-pause span {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  transition: 0.5s;
+}
